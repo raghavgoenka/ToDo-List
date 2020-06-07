@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>To Do List</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    
+    </head>
+    
+    <body>
+     
+      
+      <p id="printresult"></p>
+      <video id="video"   width="640" height="480" autoplay style="margin: 0 auto;"></video>
+    
+      <div class="box" id="heading">
+        <h1><%= listTitle%></h1>
+        
+       
+      
+        <button  style="text-align: center;" id="start" >Start</button>
+
+      <div class="boxnew">
+        <button  style="text-align: center; margin-top: 30%;" id="snap" >Snap</button>
+
+        <canvas id="canvas" width="200" height="200" ></canvas>
+
+      </div>
+    <div class="box">
+     
+        
+        <% newListItem.forEach(function(item){ %>
+          <form action="/delete" method="post">
+          <div class="item">
+          <input type="checkbox" onchange="this.form.submit()" name="deleteItem" value="<%=item._id%>" name="checkbox">
+          <p class="new"><%=item.name %></p>
+          </div> 
+       <%  })  %>
+
+      </form>
+      
+     <form class="" action="/" method="POST">
+      <input type="text" name="newItem" placeholder="New Item"  id="auto"autocomplete="off">
+     
+
+      <button type="submit" name="list" value="<%=listTitle%>" >+</button>
+
+    </form>
+
+   <button type="submit" name="voice" id="mic">🎙️
+  
+      <span class="tooltiptext">Add by voice</span>
+   
+   </button>
+   
+   
+    </div>
+     <script src="image.js"></script>
+     <script src="voice.js"></script>    
+     </body>
+</html>
