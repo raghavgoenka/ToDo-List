@@ -17,7 +17,6 @@
     "express": "^4.17.1",
     "js-alert": "^1.0.4",
     "mongoose": "^5.9.18",
-    "node-webcam": "^0.6.3",
     "recognition": "0.0.1",
     "speech": "^0.2.1",
     "webcam-easy": "^1.0.5"
