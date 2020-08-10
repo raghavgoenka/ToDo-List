@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "js-alert": "^1.0.4",
     "mongoose": "^5.9.18",
+    "mongoose-encryption": "^2.0.2",
     "recognition": "0.0.1",
     "speech": "^0.2.1",
     "webcam-easy": "^1.0.5"
